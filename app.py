@@ -41,14 +41,14 @@ app.layout = html.Div(children=[
     html.Div(children=[
 
         html.Div([
-                    html.Div('Longitude:'),
+                    #html.Div('Longitude:'),
                     #dcc.Input(id='longitude', value=-119.5, type='number', min=-124.3, max=-114.3, step=.1),
 
-                    html.Div('Latitude:'),
+                    #html.Div('Latitude:'),
                     #dcc.Input(id='latitude', value=35.6, type='number', min=32.5, max=41.95, step=.1),
 
-                    #html.Div('Location Address:'),
-                    #dcc.Input(id='location_input', value='The Getty Museum', type='text'),
+                    html.Div('Location Address:'),
+                    dcc.Input(id='location_input', value='The Getty Museum', type='text'),
             
                     html.Div('Housing Median Age:'),
                     dcc.Input(id='housing_median_age', value=28, type='number', min=1, max=52, step=1),
