@@ -134,8 +134,8 @@ app.layout = html.Div(children=[
 )
 
 ###Geopy Function
-# locator = Nominatim(user_agent='myGeogoder')
-# location = locator.geocode('location_input')
+locator = Nominatim(user_agent='myGeogoder')
+location = locator.geocode('location_input')
 
 # longitude = location.longitude
 # latitude = location.latitude
