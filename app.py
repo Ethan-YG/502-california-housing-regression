@@ -120,9 +120,9 @@ app.layout = html.Div(children=[
     Output(component_id='Results', component_property='children'),
     Input(component_id='submit-val', component_property='n_clicks'),
     # regression inputs:
-    State(component_id='longitude', component_property='value'),
-    State(component_id='latitude', component_property='value'),
-    #State(component_id='location_input', component_property='value'),
+    #State(component_id='longitude', component_property='value'),
+    #State(component_id='latitude', component_property='value'),
+    State(component_id='location_input', component_property='value'),
     State(component_id='housing_median_age', component_property='value'),
     State(component_id='total_rooms', component_property='value'),
     State(component_id='population', component_property='value'),
