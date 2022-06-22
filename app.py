@@ -4,7 +4,7 @@ from dash import dcc,html
 from dash.dependencies import Input, Output, State
 import pickle
 import numpy as np
-from geopy.geocoders import Nominatim
+#from geopy.geocoders import Nominatim
 
 ########### Define your variables ######
 myheading1='California Housing Dataset'
@@ -47,8 +47,8 @@ app.layout = html.Div(children=[
                     html.Div('Latitude:'),
                     #dcc.Input(id='latitude', value=35.6, type='number', min=32.5, max=41.95, step=.1),
 
-                    html.Div('Location:'),
-                    dcc.Input(id='location_input', value='The Getty Museum', type='text'),
+                    #html.Div('Location Address:'),
+                    #dcc.Input(id='location_input', value='The Getty Museum', type='text'),
             
                     html.Div('Housing Median Age:'),
                     dcc.Input(id='housing_median_age', value=28, type='number', min=1, max=52, step=1),
@@ -120,9 +120,9 @@ app.layout = html.Div(children=[
     Output(component_id='Results', component_property='children'),
     Input(component_id='submit-val', component_property='n_clicks'),
     # regression inputs:
-    #State(component_id='longitude', component_property='value'),
-    #State(component_id='latitude', component_property='value'),
-    State(component_id='location_input', component_property='value'),
+    State(component_id='longitude', component_property='value'),
+    State(component_id='latitude', component_property='value'),
+    #State(component_id='location_input', component_property='value'),
     State(component_id='housing_median_age', component_property='value'),
     State(component_id='total_rooms', component_property='value'),
     State(component_id='population', component_property='value'),
@@ -134,11 +134,11 @@ app.layout = html.Div(children=[
 )
 
 ###Geopy Function
-locator = Nominatim(user_agent='myGeogoder')
-location = locator.geocode('location_input')
+#locator = Nominatim(user_agent='myGeogoder')
+#location = locator.geocode('location_input')
 
-longitude = location.longitude
-latitude = location.latitude
+#longitude = location.longitude
+#latitude = location.latitude
 
 
 def make_prediction(clicks, longitude, latitude, housing_median_age, total_rooms,
