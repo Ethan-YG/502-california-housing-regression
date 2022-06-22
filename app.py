@@ -134,7 +134,7 @@ app.layout = html.Div(children=[
 )
 
 
-def make_prediction(clicks, longitude, latitude, location_input, housing_median_age, total_rooms,
+def make_prediction(clicks, longitude, latitude, housing_median_age, total_rooms,
         population, households, median_income, income_cat,
         rooms_per_hhold, pop_per_household):
     if clicks==0:
