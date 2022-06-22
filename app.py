@@ -4,7 +4,7 @@ from dash import dcc,html
 from dash.dependencies import Input, Output, State
 import pickle
 import numpy as np
-#from geopy.geocoders import Nominatim
+from geopy.geocoders import Nominatim
 
 ########### Define your variables ######
 myheading1='California Housing Dataset'
