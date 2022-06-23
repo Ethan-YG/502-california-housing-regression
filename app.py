@@ -142,7 +142,7 @@ def make_prediction(clicks, longitude, latitude, housing_median_age, total_rooms
     else:
         ###Geopy Function
         locator = Nominatim(user_agent='myGeogoder')
-        location = locator.geocode('location_input')
+        location = locator.geocode(location_input)
 
         longitude = location.longitude
         latitude = location.latitude
