@@ -140,12 +140,12 @@ def make_prediction(clicks, longitude, latitude, housing_median_age, total_rooms
     if clicks==0:
         return "waiting for inputs"
     else:
-        ###Geopy Function
-        locator = Nominatim(user_agent='myGeogoder')
-        location = locator.geocode(location_input)
+#         ###Geopy Function
+#         locator = Nominatim(user_agent='myGeogoder')
+#         location = locator.geocode(location_input)
 
-        longitude = location.longitude
-        latitude = location.latitude
+#         longitude = location.longitude
+#         latitude = location.latitude
         
 #         inputs=np.array([longitude, latitude, housing_median_age, total_rooms,
 #                population, households, median_income, income_cat,
