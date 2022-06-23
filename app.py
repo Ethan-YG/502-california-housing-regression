@@ -162,7 +162,7 @@ def make_prediction(clicks, longitude, latitude, housing_median_age, total_rooms
 #         y = lin_reg.predict(std_inputs)
 #         formatted_y = "${:,.2f}".format(y[0])
 #         return formatted_y
-        return longitude
+        return 'Ethan Test'
 
 
 
